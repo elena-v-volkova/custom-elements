@@ -1,0 +1,84 @@
+.first {
+    padding: 50px 0 150px 50px;
+}
+
+
+/* Checkbox */
+
+label {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check + span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+#check + span:before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+#check:checked + span:before {
+    opacity: 1;
+}
+
+/* Select */
+
+.choices__item {
+    background-color: black;
+    color: white;
+}
+
+/* Map */
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+[class*="copyright"] {
+    display: none;
+}
+
+/* Scroll */
+
+.simplebar-content-wrapper {
+    overflow: auto;
+  }
+  
+.custom-scroll {
+    height: 310px;
+    width: 399px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.scroll-text {
+    width: 90%;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+}
+
+.simplebar-scrollbar::before {
+    background-color: #CCB26E;
+}
+
