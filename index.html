@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,106 @@
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <!-- checkbox -->
     <div class="first">
-        <label for="check">
-            <input type="checkbox" name="check" id="check">
-            checkbox
+        <h3>Категории:</h3>
+        <label for="dinosaurs">
+            <input type="checkbox" name="dinosaurs" id="dinosaurs">
+            Динозавры
+            <span></span>
+        </label>
+        <label for="bears">
+            <input type="checkbox" name="bears" id="bears">
+            Медведи
+            <span></span>
+        </label>
+        <label for="roes">
+            <input type="checkbox" name="roes" id="roes">
+            Косули
+            <span></span>
+        </label>
+        <label for="foxes">
+            <input type="checkbox" name="foxes" id="foxes">
+            Лисы
+            <span></span>
+        </label>
+        <label for="wolves">
+            <input type="checkbox" name="wolves" id="wolves">
+            Волки
+            <span></span>
+        </label>
+        <label for="deers">
+            <input type="checkbox" name="deers" id="deers">
+            Олени и лоси
             <span></span>
         </label>
     </div>
     <!-- select -->
-    <div>
+    <div class="div-select">
         <select name="" id="selectCustom">
-            <option value="">Выбор 1</option>
-            <option value="">Выбор 2</option>
-            <option value="">Выбор 3</option>
+            <option placeholder>Материал</option>
+            <option value="wood">Древесина</option>
+            <option value="metal">Металл</option>
+            <option value="stone">Камень</option>
+            <option value="plastic">Пластик</option>
+            <option value="composite">Композитный</option>
+            <option value="gypsum">Гипс</option>
         </select>
     </div>
     <!-- map -->
-        <div id="map" style="width: 600px; height: 400px"></div>
+    <div id="map"></div>
     <!-- Scroll-bar -->
-    <div class="custom-scroll" data-simplebar>
+    <div class="custom-scroll" id="custom-scroll" data-simplebar>
         <p class="scroll-text">
-            Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.
+            Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь
+            активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы
+            вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой
+            интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая
+            примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные
+            особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем
+            настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи -
+            безусловно открывает новые горизонты для первоочередных требований.
         </p>
     </div>
-    </body>
-    <script src="/choices.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-    </script>
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-    <script src="/index.js"></script>
+    <!-- Form -->
+    <div class="div-form">
+        <form action="#" class="form">
+            <label class="input-label">
+                <input class="form-input form-control" name="Имя" type="text" placeholder="Имя*"
+                    data-validate-field="name">
+            </label>
+            <label class="input-label">
+                <input class="form-input form-control" name="tel" type="tel" placeholder="Телефон*"
+                    data-validate-field="tel" data-validate-rules="phone">
+            </label>
+            <label class="input-label">
+                <input class="form-input form-control" name="email" type="email" placeholder="E-mail*"
+                    data-validate-field="mail">
+            </label>
+            <button class="form-button">Отправить</button>
+        </form>
+    </div>
+    <!-- Tooltip -->
+    <div class="div-tooltip">
+        <p class="tooltip-text">
+            Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+            внешнеэкономических политик.
+            <span class="tooltip">
+                <span class="marker" tabindex="0"></span>
+                <span class="popup">Глава 2, страница 176</span>
+            </span>
+        </p>
+    </div>
 </body>
+<script src="/choices.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+</script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="/inputmask.min.js"></script>
+<script src="/js/just-validate.min.js"></script>
+<script src="/index.js"></script>
+</body>
+
 </html>
